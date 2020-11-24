@@ -1,0 +1,11 @@
+ÚVOD
+
+Cílem mé maturitní práce je vytvořit učebnici pro IoT - konkrétněji pro základy s vývojovou deskou ESP8266 - zde budu konkrétně používat Wemod D1 mini -
+a práci ve vývojovém prostřefí Arduino IDE.
+Tato učebnici bude používána na prázdninových kurzech "Hrajeme si s IoT". Bude určena pro lidi, kteří nemají žádné, zkušenosti s programováním.
+
+V průběhu kurzu se mají žáci naučit základy syntaxe Wiringu (programovací jazyk pro Arduino IDE) - proměnné, cykly, podmínky, metody - dále zapojení elektrického obvodu
+- žárovka (jak musí být co zapojené), podle schématu, či podle popisu - I2C zařízení.
+Během 4 dní po 4 vyučovacích hodinách by měli žáci umět základní věci a měli by být schopni dále samostatně pokračovat - pomocí návodů na internetu.
+
+Součástí této učebnice budou i jiné komponenty - komplexnější úlohy. Například RFID-RC522 (čtečka čipů).
