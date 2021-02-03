@@ -1,6 +1,6 @@
-  #define red 12 //D6
+  #define red 15 //D8
   #define gre 13 //D7
-  #define blu 15 //D8
+  #define blu 12 //D6
 
   int prodleva = 1500; //prodleva sekunda a půl
 
