@@ -1,5 +1,3 @@
-  int prodleva = 100; //prodleva bude 0,1 s  
-
 void setup() {
   Serial.begin(9600);
   delay(2000);
