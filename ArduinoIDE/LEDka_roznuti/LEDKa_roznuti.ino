@@ -9,6 +9,6 @@ void loop() {
   digitalWrite(cervena, HIGH);
   delay(1000);
   digitalWrite(cervena, LOW);
-  delay(1000s);
+  delay(1000);
 
 }
