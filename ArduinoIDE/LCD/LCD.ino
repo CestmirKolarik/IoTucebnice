@@ -7,11 +7,11 @@
 
 void setup()
 {
-	lcd.begin();
+  lcd.begin();
 
-	// Zapnutí podstvícení a výpis zprávy
-	lcd.backlight();
-	lcd.print("Hrajeme si s IoT");
+  // Zapnutí podstvícení a výpis zprávy
+  lcd.backlight();
+  lcd.print("Hrajeme si s IoT");
 }
 
 void loop()
