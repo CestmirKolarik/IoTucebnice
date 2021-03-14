@@ -85,8 +85,6 @@ void setup() {
   ThingSpeak.begin(client);
   //připojíme se k wifi
   connectWiFi();
-  
-
 }
 
 //cislo, ktere budeme vypisovat na thingspeak. v průběhu loopu se bude jeho hodnota náhodně měnit
