@@ -7,10 +7,13 @@ void setup() {
 }
 
 void loop() {
+
   //10× vypsat Ahoj
   for(int i = 0; i <10; i++)
   {
     Serial.println("Ahoj");
   }
+
+  Serial.println("KONEC");
   
 }

@@ -4,8 +4,8 @@
   #include <WiFiUdp.h>
   
   //jméno a heslo pro připojení na WiFi
-  const char* ssid     = "";
-  const char* password = "";
+  const char* ssid     = "IoT";
+  const char* password = "17091991";
   
   //adresa ntp serveru - v evropě používáme evropský server
   const char* NTPServer = "europe.pool.ntp.org";

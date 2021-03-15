@@ -14,8 +14,10 @@ void loop() {
     }
       else
     {
-      Serial.println("Číslo není větší než 10")
+      Serial.println("Číslo není větší než 10");
     }
   }
+
+  Serial.println("KONEC");
   
 }
