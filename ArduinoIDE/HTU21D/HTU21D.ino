@@ -7,10 +7,10 @@
 void setup()
 {
   Serial.begin(9600);
-  Serial.println();
+  delay(5000);
   Serial.println("Sériová komunikace funguje");
 
-  //kontroluje, že je čidlo zapojené
+  //kontroluje, že je čidlo správně zapojené a funguje
   while (myHTU21D.begin() != true)
   {
     Serial.println(F("HTU21D, SHT21 snímač selhal nebo není připojen"));

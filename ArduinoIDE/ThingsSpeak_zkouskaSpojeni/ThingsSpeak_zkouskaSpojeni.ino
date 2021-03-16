@@ -6,8 +6,8 @@
   const char* ssid = "jmeno";
   const char* pass = "heslo";
 
-  //číslo kanálu - channel ID (6 místné číslo)
-  unsigned long myChannelNumber = 000000;
+  //číslo kanálu - channel ID (7 místné číslo)
+  unsigned long myChannelNumber = 0000000;
   //API Keys - Write API Key (16 znaků)
   const char* myWriteAPIKey = "XXXXXXXXXXXXXXXX";
 

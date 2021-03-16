@@ -1,15 +1,19 @@
   //inicializace knihoven
   #include <ThingSpeak.h>
   #include <ESP8266WiFi.h>
+  #include <Wire.h>
+  #include <HTU21D.h>
+
+  HTU21D myHTU21D(HTU21D_RES_RH12_TEMP14);
 
   //jménoa  heslo k wifi
-  const char* ssid = "IoT";
-  const char* pass = "17091991";
+  const char* ssid = "";
+  const char* pass = "";
 
-  //číslo kanálu na thingspeaku najdete jako channel ID, jeto 6 místné číslo, to napište místo nul
-  unsigned long myChannelNumber = 1327277;
+  //číslo kanálu na thingspeaku najdete jako channel ID, jeto 7 místné číslo, to napište místo nul
+  unsigned long myChannelNumber = 0000000;
   //API Keys - Write API Key (16 znaků)
-  const char* myWriteAPIKey = "2O02CL15KHBU7RY0";
+  const char* myWriteAPIKey = "XXXXXXXXXXXXXXXX";
 
   //definujeme si jednu sekundu, tedy 1000 ms
   const int second = 1000;
@@ -79,6 +83,17 @@ boolean sendToThingspeak(){
 void setup() {
   //inicializace sériové komunikace pro stavové hlášení
   Serial.begin(9600);
+  delay(2000);
+  Serial.println("Sériová komunikace funguje");
+  
+  //kontroluje, že je čidlo správně zapojené a funguje
+  while (myHTU21D.begin() != true)
+  {
+    Serial.println(F("HTU21D, SHT21 snímač selhal nebo není připojen"));
+    delay(5000);
+  }
+  Serial.println(F("HTU21D, SHT21 snímač je aktivní"));
+  
   //nastavíme wifi jako klienta, zde je klientem myšleno naše zařízení, které se připojuje k síti wifi jako klient
   WiFi.mode(WIFI_STA);
   //a inicializujeme thingspeak, abychom s ním mohli komunikovat, předáváme mu wifi klienta
@@ -87,24 +102,21 @@ void setup() {
   connectWiFi();
 }
 
-  //číslo, ktere budeme vypisovat na thingspeak. v průběhu loopu se bude jeho hodnota náhodně měnit
-  int cislo = 0;
 void loop() {
   //pokud je wifi odpojena, znovu ji připojíme
   if(WiFi.status() != WL_CONNECTED){
     connectWiFi();
   }
-  //přiřadíme hodnotu prvnímu poli v thingspeaku, pokud budete mít více polí, měníte číslo pole, tedy první parametr, druhý parametr je posílaná hodnota
-  ThingSpeak.setField(1, cislo);
-  //takto by vypadal zápis do druhého pole
-  //ThingSpeak.setField(2, hodnota);
+
+  //z čidel si do proměnných načteme hodnoty
+  float teplota = myHTU21D.readTemperature();
+  float vlhkost = myHTU21D.readHumidity();
   
+  ThingSpeak.setField(1, teplota);
+  ThingSpeak.setField(2, vlhkost);
   
   //odešleme hodnoty polí na thingspeak
   sendToThingspeak();
-
-  //změní hodnotu proměnné cislo na náhodné číslo z rozsahu 0-100
-  cislo = random(0, 100);
   
   //počká interval
   delay(interval);
