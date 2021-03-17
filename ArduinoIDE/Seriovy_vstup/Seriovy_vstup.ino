@@ -6,11 +6,10 @@ void setup() {
 
 void loop() {
   String prectenaHodnota = "";
-  Serial.println("Zadejte slovo";
-  while(prectenaHodnota == "") {
+  Serial.println("Zadejte slovo");
+  while(prectenaHodnota.equals("")) {
     prectenaHodnota = Serial.readString();
   }
   Serial.print("Prectena hodnota je: ");
   Serial.println(prectenaHodnota);
-
 }
