@@ -37,6 +37,7 @@ boolean connectWiFi(){
   //vypíše na seriovy monitor že probíhá inicializace wifi
   Serial.println("Connecting to WiFi.");
   delay(10);
+  WiFi.persistent(false);
   //připojí se k wifi s daným ssid a heslem
   WiFi.begin(ssid, password);
   //čítač opakování připojení

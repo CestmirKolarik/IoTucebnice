@@ -4,8 +4,8 @@
   #include <WiFiUdp.h>
   
   //jméno a heslo pro připojení na WiFi
-  const char* ssid     = "IoT";
-  const char* password = "17091991";
+  const char* ssid     = "";
+  const char* password = "";
   
   //adresa ntp serveru - v evropě používáme evropský server
   const char* NTPServer = "europe.pool.ntp.org";
@@ -29,6 +29,7 @@ boolean connectWiFi(){
   Serial.println("Connecting to WiFi.");
   delay(10);
   //připojí se k wifi s daným ssid a heslem
+  WiFi.persistent(false);
   WiFi.begin(ssid, password);
   //čítač opakování připojení
   int count = 0;
