@@ -5,7 +5,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.print(); //vypíše na aktuální řádek a další výpis bude na stejném řádku
+  Serial.print(""); //vypíše na aktuální řádek a další výpis bude na stejném řádku
   Serial.println(); //vypíše na aktuální řádek a další výpis bude na novém řádku
 
   String pozdrav = "Ahoj světe";
