@@ -1,10 +1,10 @@
 #include <ESP8266WiFi.h>
 
  // Nazev Wi-Fi site, do ktere se mam pripojit
-const char* ssid = "ASUS";
+const char* ssid = "";
 
  // Heslo Wi-Fi site, do ktere se mam pripojit
-const char* pass = "n0ctu136";
+const char* pass = "";
 
 // Ma svitit lampicka?
 bool svetlo = false;
