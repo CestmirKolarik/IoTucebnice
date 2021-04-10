@@ -3,9 +3,7 @@
 
 void setup() {
   pinMode(cervena, OUTPUT);
-
   blikni(6);
-
 }
 
 void loop() {
@@ -13,7 +11,7 @@ void loop() {
 }
 
 void blikni(int pocet) {
-  for(int i = 0, i < pocet, i++)
+  for(int i = 0; i < pocet; i++)
   {
     digitalWrite(cervena, HIGH);
     delay(prodleva);
