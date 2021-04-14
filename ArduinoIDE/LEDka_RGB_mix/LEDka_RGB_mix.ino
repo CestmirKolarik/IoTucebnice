@@ -13,7 +13,7 @@ void setup() {
 
 void loop() {
 
-  //červená - #8b00ff - (139; 0; 255)
+  //fialová - #8b00ff - (139; 0; 255)
   analogWrite(red,556);
   analogWrite(gre, 0);
   analogWrite(blu, 1020);

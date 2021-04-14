@@ -5,11 +5,13 @@ void setup() {
 }
 
 void loop() {
-  Serial.print(""); //vypíše na aktuální řádek a další výpis bude na stejném řádku
-  Serial.println(); //vypíše na aktuální řádek a další výpis bude na novém řádku
+  Serial.print("Serial.print()"); //vypíše na aktuální řádek a další výpis bude na stejném řádku
+  Serial.println("Serial.println()"); //vypíše na aktuální řádek a další výpis bude na novém řádku
 
   String pozdrav = "Ahoj světe";
   Serial.println(pozdrav);
   Serial.println("Ahoj světe");
+
+  delay(10000);
 
 }

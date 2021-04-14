@@ -5,7 +5,6 @@ void setup() {
   pinMode(cervena, OUTPUT);
 
   blikni();
-
 }
 
 void loop() {
@@ -16,6 +15,6 @@ void blikni() {
   digitalWrite(cervena, HIGH);
   delay(prodleva);
   digitalWrite(cervena, LOW);
+  
   delay(prodleva);
-
 }

@@ -12,8 +12,10 @@ void loop() {
   for(int i = 0; i <10; i++)
   {
     Serial.println("Ahoj");
+    delay(prodleva);
   }
 
   Serial.println("KONEC");
+  delay(5000);
   
 }

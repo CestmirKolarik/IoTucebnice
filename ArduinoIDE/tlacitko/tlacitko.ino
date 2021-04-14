@@ -5,7 +5,7 @@ boolean stavTlacitka = LOW; //tlačítko je na začátku nestisknuté
   
 void setup() {
   pinMode(tlacitko, INPUT); //vstup - tlačítko
-  pinMode(cervena, OUTPUT); //výstup - LEDka
+  pinMode(cervena, OUTPUT); //výstup - LED dioda
   }
 
 void loop() {
