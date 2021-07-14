@@ -3,8 +3,8 @@
   #include <ESP8266WiFi.h>
 
   //jméno a heslo k wifi
-  const char* ssid = "IoT";
-  const char* pass = "17091991";
+  const char* ssid = "";
+  const char* pass = "";
 
   // Modul pro měření teploty a barometrického tlaku - bmp280
   // připojení potřebných knihoven
@@ -23,9 +23,9 @@
   const int prodleva = 5000;
 
   //číslo kanálu - channel ID (7 místné číslo)
-  unsigned long myChannelNumber = 1444083;
+  unsigned long myChannelNumber = 0000000;
   //API Keys - Write API Key (16 znaků)
-  const char* myWriteAPIKey = "ZSJI6CWHO5FG0A1Z";
+  const char* myWriteAPIKey = "################";
 
   //definice 1 sekundy (tedy 1000 ms)
   const int second = 1000;
